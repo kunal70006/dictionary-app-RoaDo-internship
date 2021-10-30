@@ -10,15 +10,18 @@ const AddWord = () => {
     e.preventDefault();
     // Sending a POST req to the server to add a specific word to the DB
     try {
-      const res = await fetch(`https://mern-internship.herokuapp.com/${word}`, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-        body: JSON.stringify({
-          word,
-        }),
-      });
+      const res = await fetch(
+        `https://mern-internship.herokuapp.com/add/${word}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+          body: JSON.stringify({
+            word,
+          }),
+        }
+      );
 
       window.location.reload();
     } catch (err) {
