@@ -16,7 +16,7 @@ const WordDetails = () => {
 
   const getWord = async () => {
     // Getting the details of a specific word from server
-    const res = await fetch(`http://localhost:5000${params}`);
+    const res = await fetch(`https://mern-internship.herokuapp.com${params}`);
     const data = await res.json();
     setWord(data);
     isLoading(false);

@@ -14,7 +14,7 @@ const Words = () => {
 
   // Getting data from server
   const getData = async () => {
-    const response = await fetch("http://localhost:5000/", {
+    const response = await fetch("https://mern-internship.herokuapp.com/", {
       headers: {
         "Content-Type": "application/json",
       },
